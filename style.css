@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+}
+/* 
+.sketchPad {
+	height: 500px;
+	width: 500px;
+	border: 2px solid black;
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	grid-template-rows: repeat(16, 1fr);
+}
+
+.gridBox {
+	border: 1px solid black;
+} */
+
+.canvas {
+	height: 400px;
+	width: 400px;
+	border: 2px solid black;
+	display: grid;
+}
+
+.cell {
+	border: 1px solid #5b5b5b;
+}
