@@ -57,6 +57,7 @@
 const canvas = document.querySelector(".canvas");
 const sliderValue = document.querySelector(".slider-value");
 const slider = document.querySelector("#slider");
+const cells = canvas.children;
 
 function initGrid() {
 	const sliderValue = document.getElementById("slider").value;
@@ -91,3 +92,25 @@ slider.addEventListener("change", () => {
 	initGrid();
 	sliderValue.textContent = document.getElementById("slider").value + "x" + document.getElementById("slider").value;
 });
+
+const rbwBtn = document.querySelector(".rbw-btn");
+
+rbwBtn.addEventListener("click", () => {
+	let value = document.getElementById("slider").value;
+	for (let i = 0; i < value * value; i++) {
+		cells[i].addEventListener("mouseover", (e) => {
+			e.target.style.backgroundColor = randomColorGen();
+		});
+	}
+});
+
+function randomColorGen() {
+	let hexValues = "0123456789ABCDEF";
+	let color = "#";
+
+	for (let i = 0; i < 6; i++) {
+		color += hexValues[Math.floor(Math.random() * 16)];
+	}
+
+	return color;
+}
