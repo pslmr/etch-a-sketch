@@ -114,3 +114,11 @@ function randomColorGen() {
 
 	return color;
 }
+
+const gridLineBtn = document.querySelector(".gridline-btn");
+gridLineBtn.addEventListener("click", () => {
+	let value = document.getElementById("slider").value;
+	for (let i = 0; i < value * value; i++) {
+		cells[i].classList.toggle("cell");
+	}
+});
