@@ -81,5 +81,19 @@ color.addEventListener("change", () => {
 	}
 });
 
+const eraseBtn = document.querySelector(".erase-btn");
+eraseBtn.addEventListener("click", () => {
+	let colorVal = document.getElementById("colorpicker").value;
+	let value = document.getElementById("slider").value;
+	for (let i = 0; i < value * value; i++) {
+		cells[i].addEventListener("mouseover", (e) => {
+			e.target.style.backgroundColor = "white";
+		});
+	}
+});
+
+function grayscale() {
+    
+}
 
 initGrid();
