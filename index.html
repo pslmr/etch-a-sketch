@@ -9,13 +9,27 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<div class="canvas"></div>
-		<button class="btn new-btn">Reset</button>
-		<input type="range" min="2" max="100" value="16" id="slider" /><span class="slider-value">16x16</span>
-		<button class="btn rbw-btn">Rainbow</button>
-		<button class="btn gridline-btn">Toggle Gridlines</button>
-		<button class="btn grayscale-btn">Grayscale</button>
-		<input type="color" id="colorpicker" value="#000000" />
-		<button class="btn erase-btn">Eraser</button>
+		<h1>E.Sketch</h1>
+		<div class="main-container">
+			<div class="left-menu">
+				<input type="color" id="colorpicker" value="#000000" />
+				<button class="btn rbw-btn">Rainbow</button>
+				<button class="btn grayscale-btn">Grayscale</button>
+				<button class="btn gridline-btn">Toggle Gridlines</button>
+			</div>
+
+			<div class="canvas"></div>
+
+			<div class="right-menu">
+				<button class="btn new-btn">Reset</button>
+				<input type="range" min="2" max="100" value="16" id="slider" />
+				<span>Grid Dimension:</span>
+				<span class="slider-value">16x16</span>
+				<button class="btn erase-btn">Eraser</button>
+			</div>
+		</div>
+		<div class="footer">
+			<div>Coded by: PA-30 [TOP]</div>
+		</div>
 	</body>
 </html>
