@@ -59,10 +59,14 @@ function randomColorGen() {
 }
 
 const gridLineBtn = document.querySelector(".gridline-btn");
-gridLineBtn.addEventListener("click", () => {
+gridLineBtn.addEventListener("click", (e) => {
 	let value = document.getElementById("slider").value;
 	for (let i = 0; i < value * value; i++) {
-		cells[i].classList.toggle("cell");
+		if (cells[i].classList.contains("cell")) {
+			cells[i].classList.replace("cell", "cell-borderOff");
+		} else {
+			cells[i].classList.add("cell");
+		}
 	}
 });
 
@@ -92,8 +96,6 @@ eraseBtn.addEventListener("click", () => {
 	}
 });
 
-function grayscale() {
-    
-}
+function grayscale() {}
 
 initGrid();
