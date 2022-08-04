@@ -53,6 +53,10 @@ body {
 	font-family: monospace, sans-serif;
 }
 
+.btn.new-btn {
+	background-color: #fe6767;
+}
+
 .btn:hover {
 	background-color: #1d1d1d;
 	color: #ffffff;
